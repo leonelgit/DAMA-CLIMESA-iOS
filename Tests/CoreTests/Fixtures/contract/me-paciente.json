@@ -1,0 +1,9 @@
+{
+  "method": "PATCH",
+  "path": "/api/v1/me/paciente",
+  "body": {
+    "version": 4,
+    "phone": "7777-7777",
+    "address": "Colonia Escalón, San Salvador"
+  }
+}

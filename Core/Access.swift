@@ -1,0 +1,246 @@
+import Foundation
+public struct Permission: Codable, Equatable, Sendable {
+    public let code: String
+    public let context: String
+    public init(code: String, context: String) { self.code = code; self.context = context }
+}
+public struct AccessProfile: Codable, Sendable {
+    public let id: String
+    public let email: String
+    public let name: String
+    public let roles: [String]
+    public let platforms: [String]
+    public let permissions: [Permission]
+    /// Canales de Realtime a los que el usuario puede unirse (los entrega /auth/me). Vacío si la API no los envía.
+    public let channels: [String]
+    /// Expediente vinculado a la cuenta (paciente); nil mientras no se apruebe la vinculación (I03).
+    public let patientId: String?
+    /// Persona de personal vinculada (médico); la usa la indicación de hospitalización como médico tratante.
+    public let staffId: String?
+    /// D129: name and number of the linked record (`patientName`, `patientRecord` of `/auth/me`); nil without a link or
+    /// from an older API.
+    public let patientName: String?
+    public let patientRecord: String?
+    public init(id: String, email: String, name: String, roles: [String], platforms: [String], permissions: [Permission], channels: [String] = [], patientId: String? = nil, staffId: String? = nil,
+                patientName: String? = nil, patientRecord: String? = nil) {
+        self.id=id; self.email=email; self.name=name; self.roles=roles; self.platforms=platforms; self.permissions=permissions; self.channels=channels
+        self.patientId=patientId; self.staffId=staffId; self.patientName=patientName; self.patientRecord=patientRecord
+    }
+    private enum CodingKeys: String, CodingKey { case id, email, name, roles, platforms, permissions, channels, patientId, staffId, patientName, patientRecord }
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        email = try container.decode(String.self, forKey: .email)
+        // `SessionProfileResponse.name` es nullable en el contrato.
+        name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+        roles = try container.decode([String].self, forKey: .roles)
+        platforms = try container.decode([String].self, forKey: .platforms)
+        permissions = try container.decode([Permission].self, forKey: .permissions)
+        channels = try container.decodeIfPresent([String].self, forKey: .channels) ?? []
+        patientId = try container.decodeIfPresent(String.self, forKey: .patientId)
+        staffId = try container.decodeIfPresent(String.self, forKey: .staffId)
+        patientName = try container.decodeIfPresent(String.self, forKey: .patientName)
+        patientRecord = try container.decodeIfPresent(String.self, forKey: .patientRecord)
+    }
+
+    /// D129: the name to greet. An account without a staff record is a patient: its linked record's name wins (the API
+    /// now sends it as `name` too); a staff member keeps their own name.
+    public var displayName: String {
+        if staffId == nil, let linked = patientName?.trimmingCharacters(in: .whitespacesAndNewlines), !linked.isEmpty { return linked }
+        return name.isEmpty ? (patientName ?? "") : name
+    }
+    public func hasPermission(_ code: String) -> Bool { permissions.contains { $0.code == code } }
+    // Solo se invoca con el perfil verificado que devuelve /auth/me; nunca con metadatos del JWT.
+    public var allowedIOSRoles: [String] {
+        guard platforms.contains("ios"), permissions.contains(where: { $0.code == "sesion.perfil" }) else { return [] }
+        return ["MED", "PAC"].filter { roles.contains($0) }
+    }
+}
+public enum RolePolicy {
+    /// Clave de Localizable.xcstrings con el nombre visible del rol.
+    public static func labelKey(_ role: String) -> String { role == "MED" ? "role.MED" : "role.PAC" }
+}
+
+/// Nombre visible de cada código de rol (`docs/arquitectura/datos/roles.csv`). Un texto que no es código (por ejemplo
+/// «Personal del hospital» que ya manda la API) se muestra tal cual.
+public enum RoleNames {
+    private static let names: [String: String] = [
+        "ADM": "Administrador", "JOP": "Jefe de Operaciones", "REC": "Recepcionista", "AST": "Asistente",
+        "ENF": "Enfermero/a", "MED": "Médico", "LAB": "Laboratorista", "PAR": "Paramédico",
+        "DPD": "Delegado de protección de datos", "PAC": "Paciente"
+    ]
+
+    public static func label(_ code: String) -> String { names[code.uppercased()] ?? code }
+
+    /// Lista de roles con sus nombres, separados por coma («Médico, Paciente»).
+    public static func list(_ codes: [String]) -> String { codes.map(label).joined(separator: ", ") }
+}
+
+/// Pestañas de la app (spec 122, escenario 1). Médico: Mi día, Pacientes, Resultados, Turnos, Más (agenda, hospital, ambulancia, perfil).
+/// Paciente: Inicio, Fila, Citas, Exámenes, Más.
+public enum AppTab: String, Equatable, Hashable, Sendable, CaseIterable {
+    case miDia, pacientes, resultados, turnos, perfil
+    case inicio, fila, citas, examenes, mas
+
+    /// Clave de Localizable.xcstrings con el título de la pestaña.
+    public var titleKey: String { "tab.\(rawValue)" }
+
+    /// Web icon of the tab (same concept as the web module).
+    public var icon: ClimesaIconName {
+        switch self {
+        case .miDia: return .home
+        case .pacientes: return .users
+        case .resultados: return .lab
+        case .turnos: return .clock
+        case .perfil: return .user
+        case .inicio: return .home
+        case .fila: return .queue
+        case .citas: return .calendar
+        case .examenes: return .lab
+        case .mas: return .menu
+        }
+    }
+
+    /// Todas las pestañas de Médico y Paciente consultan la API (las secciones sin permiso no aparecen).
+    public var isImplemented: Bool { true }
+
+    /// Permiso que la pestaña exige además del rol (regla 8 de AGENTS.md: se pregunta por permiso).
+    public var requiredPermission: String? {
+        switch self {
+        case .pacientes: return "pacientes.buscar"
+        case .turnos: return "turnos.ver"
+        case .fila: return "fila.ver"
+        case .citas: return "citas.ver"
+        case .resultados, .examenes: return "resultados.ver"
+        default: return nil
+        }
+    }
+}
+
+public enum AccessDecision: Equatable, Sendable {
+    case tabs(role: String, tabs: [AppTab])
+    /// Ni Médico ni Paciente con acceso a iOS: se muestra "Tu rol no usa esta aplicación".
+    case unsupportedRole
+}
+
+public enum TabPolicy {
+    public static func candidates(for role: String) -> [AppTab] {
+        role == "MED" ? [.miDia, .pacientes, .resultados, .turnos, .mas] : [.inicio, .fila, .citas, .examenes, .mas]
+    }
+
+    /// Decide con el perfil verificado de /auth/me. `preferredRole` solo aplica si la cuenta tiene ese rol en iOS.
+    public static func decide(_ profile: AccessProfile, preferredRole: String? = nil) -> AccessDecision {
+        let allowed = profile.allowedIOSRoles
+        guard let first = allowed.first else { return .unsupportedRole }
+        let role = preferredRole.flatMap { allowed.contains($0) ? $0 : nil } ?? first
+        let tabs = candidates(for: role).filter { tab in
+            guard let code = tab.requiredPermission else { return true }
+            return profile.hasPermission(code)
+        }
+        return .tabs(role: role, tabs: tabs)
+    }
+}
+/// Secciones que se abren desde una pestaña (Más del paciente y Mi día del médico). Cada una exige su permiso del
+/// catálogo (`acceso.rol_permiso`); sin él no aparece. Nada se decide por el nombre del rol.
+public enum AppSection: String, CaseIterable, Hashable, Sendable {
+    // Paciente (Más)
+    case vinculacion, historial, ambulancia, hospital, accesos, perfil
+    // Paciente: sus datos y su habitación si está hospitalizado
+    case misDatos, miHabitacion
+    // Ambos: ubicación del hospital
+    case ubicacion
+    // Médico (Más)
+    case agenda, hospitalizados, ambulanciaEstado, llegadaAmbulancia
+    // Ambos: Avisos en su propia área (Fase 2, S11); basta la sesión
+    case avisos
+
+    public var titleKey: String { "section.\(rawValue)" }
+
+    /// Web icon of the section; nil where the web has no icon for the concept (the view keeps `symbol`).
+    public var icon: ClimesaIconName? {
+        switch self {
+        case .vinculacion, .ubicacion: return nil
+        case .historial: return .audit
+        case .ambulancia: return .ambulance
+        case .hospital: return .building
+        case .accesos: return .privacy
+        case .perfil: return .user
+        case .hospitalizados: return .bed
+        case .llegadaAmbulancia: return .ambulance
+        case .misDatos: return .clipboard
+        case .miHabitacion: return .bed
+        case .agenda: return .calendar
+        case .ambulanciaEstado: return .ambulance
+        case .avisos: return .bell
+        }
+    }
+
+    /// SF Symbol outline for the sections without a web icon (`icon == nil`).
+    public var symbol: String {
+        switch self {
+        case .vinculacion: return "link"
+        case .ubicacion: return "map"
+        default: return "circle"
+        }
+    }
+
+    /// Permiso que exige la sección; nil si basta la sesión.
+    public var requiredPermission: String? {
+        switch self {
+        case .vinculacion: return "cuenta.vincular"
+        case .historial: return "expediente.ver"
+        case .ambulancia: return "ambulancia.solicitar"
+        case .accesos: return "auditoria.mis_accesos"
+        case .misDatos: return "pacientes.ver_ficha"
+        case .miHabitacion: return "admision.ver"
+        case .agenda: return "consulta.iniciar"
+        case .hospitalizados: return "admision.ver"
+        case .ambulanciaEstado: return "ambulancia.ver_estado"
+        case .llegadaAmbulancia: return "ambulancia.recibir_prehospital"
+        case .hospital, .ubicacion, .perfil, .avisos: return nil
+        }
+    }
+
+    /// Secciones visibles para el rol de trabajo y los permisos del perfil.
+    public static func visible(for role: String, profile: AccessProfile) -> [AppSection] {
+        let candidates: [AppSection] = role == "MED"
+            ? [.avisos, .agenda, .hospitalizados, .ambulanciaEstado, .llegadaAmbulancia, .hospital, .ubicacion, .perfil]
+            : [.avisos, .vinculacion, .misDatos, .historial, .miHabitacion, .ambulancia, .hospital, .ubicacion, .accesos, .perfil]
+        return candidates.filter { section in
+            // La vinculación solo tiene sentido mientras la cuenta no tenga expediente.
+            if section == .vinculacion && profile.patientId != nil { return false }
+            // Sus datos y su habitación existen solo con un expediente vinculado.
+            if (section == .misDatos || section == .miHabitacion) && profile.patientId == nil { return false }
+            guard let code = section.requiredPermission else { return true }
+            return profile.hasPermission(code)
+        }
+    }
+}
+
+public enum RegistrationRules {
+    public static func errors(name: String, email: String, password: String, confirmation: String) -> [String] {
+        var errors: [String] = []
+        let size = name.trimmingCharacters(in: .whitespacesAndNewlines).count
+        if !(2...120).contains(size) { errors.append("Escribe tu nombre completo.") }
+        if email.range(of: #"^[^\s@]+@[^\s@]+\.[^\s@]+$"#, options: .regularExpression) == nil { errors.append("Ingresa un correo válido.") }
+        if password.count < 8 || password.rangeOfCharacter(from: .uppercaseLetters) == nil || password.rangeOfCharacter(from: .lowercaseLetters) == nil || password.rangeOfCharacter(from: .decimalDigits) == nil || password.unicodeScalars.allSatisfy({ CharacterSet.alphanumerics.contains($0) }) { errors.append("Usa 8 caracteres, mayúscula, minúscula, número y símbolo.") }
+        if password != confirmation { errors.append("Las contraseñas no coinciden.") }
+        return errors
+    }
+}
+
+/// Preconditions sweep (S0): how a screen offers one action. An action the user can never do is hidden; one blocked by a
+/// temporary precondition shows disabled with a calm reason and the next step, before the tap, so the API never has to
+/// refuse it. `ClimesaButton(blockedReason:)` renders `.blocked`.
+public enum ActionGate: Equatable, Sendable {
+    case hidden
+    case available
+    case blocked(reason: String)
+
+    public var isVisible: Bool { self != .hidden }
+    public var isAvailable: Bool { self == .available }
+    public var blockedReason: String? {
+        if case let .blocked(reason) = self { return reason }
+        return nil
+    }
+}

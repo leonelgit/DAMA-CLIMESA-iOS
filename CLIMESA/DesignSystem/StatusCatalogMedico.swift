@@ -1,0 +1,86 @@
+import SwiftUI
+
+/// Códigos de estado de las pantallas del Médico que `StatusCatalog` no trae (fila, consulta, ingreso, prioridad de ambulancia).
+/// Los tonos siguen los mismos grupos `.status-*` de web/src/modules.css.
+enum StatusCatalogMedico {
+    static let tones: [String: StatusTone] = [
+        "en_espera": .reserved, "llamado": .warning, "en_atencion": .process, "atendido": .success, "atendida": .success,
+        "confirmada": .process, "solicitada": .reserved, "abierta": .process, "firmada": .success,
+        "pendiente_cama": .warning, "hospitalizado": .success, "alta_firmada": .process, "egresado": .blocked,
+        "roja": .danger, "naranja": .warning, "amarilla": .warning, "verde": .success
+    ]
+
+    static func tone(for code: String) -> StatusTone {
+        tones[code] ?? StatusCatalog.style(for: code).tone
+    }
+}
+
+/// Etiqueta de estado con los tonos extra del Médico; `label` trae la etiqueta en español del contrato.
+struct MedicoTag: View {
+    let code: String
+    var label: String?
+
+    init(_ code: String, label: String? = nil) { self.code = code; self.label = label }
+
+    var body: some View {
+        // Fase 2: misma insignia que `StatusTag`; un código sin familia (triaje, `atendido`) conserva el tono del Médico.
+        StatusBadge(code, label: label, fallbackTone: StatusCatalogMedico.tone(for: code))
+    }
+}
+
+/// Campo de texto de varias líneas con rótulo y error (el `FormField` del sistema es de una línea).
+struct MedicoTextArea: View {
+    let label: String
+    @Binding var text: String
+    var error: String?
+    var lines: ClosedRange<Int> = 3...8
+    /// Lote 5 S3: a required field shows the red «*» after its label.
+    var required = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: Spacing.s) {
+            RequiredLabel(label: label, required: required)
+            TextField("", text: $text, axis: .vertical)
+                .lineLimit(lines)
+                .font(Typo.body).foregroundStyle(Theme.ink)
+                .padding(Spacing.m).frame(minHeight: 96, alignment: .topLeading)
+                .background(Theme.surface, in: RoundedRectangle(cornerRadius: Radius.control))
+                .overlay(RoundedRectangle(cornerRadius: Radius.control).stroke(error == nil ? Theme.controlLine : Theme.danger, lineWidth: error == nil ? 1 : 2))
+            // Lote 5 S3: the error sits under its own field, in red, and is read with it.
+            if let error {
+                Label { Text(verbatim: error).fixedSize(horizontal: false, vertical: true) } icon: { ClimesaIcon(.alert, size: 14) }
+                    .font(Typo.caption).foregroundStyle(Theme.danger)
+            }
+        }
+    }
+}
+
+/// Resultado de una escritura: un conflicto de versión (409) muestra «Cerrar y recargar»; lo demás, el aviso de siempre.
+struct WriteNotice: View {
+    let submission: Submission
+    let reload: () async -> Void
+
+    var body: some View {
+        if submission.lastFailure?.isVersionConflict == true {
+            ConflictBanner { Task { submission.clearFailure(); await reload() } }
+        } else {
+            SubmissionNotice(submission: submission)
+        }
+    }
+}
+
+/// Aviso de valor crítico o de riesgo (fondo y texto de peligro).
+struct MedicoAlert: View {
+    let text: String
+
+    var body: some View {
+        HStack(alignment: .top, spacing: Spacing.m) {
+            ClimesaIcon(.alert, size: 18).foregroundStyle(Theme.danger).accessibilityHidden(true)
+            Text(verbatim: text).font(Typo.small).foregroundStyle(Theme.danger)
+        }
+        .padding(Spacing.l).frame(maxWidth: .infinity, alignment: .leading)
+        .background(Theme.dangerSoft, in: RoundedRectangle(cornerRadius: Radius.card))
+        .overlay(RoundedRectangle(cornerRadius: Radius.card).stroke(Theme.danger, lineWidth: 1))
+        .accessibilityElement(children: .combine)
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "method": "POST",
+  "path": "/api/v1/consultas",
+  "body": {
+    "appointmentId": "44444444-4444-4444-8444-444444444444"
+  }
+}

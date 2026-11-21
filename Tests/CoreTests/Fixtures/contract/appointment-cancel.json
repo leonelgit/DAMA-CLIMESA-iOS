@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "path": "/api/v1/citas/{id}/cancelar",
+  "body": {
+    "version": 2,
+    "reason": "No podré asistir por un compromiso de trabajo."
+  }
+}

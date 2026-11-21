@@ -1,0 +1,191 @@
+import Foundation
+import SwiftUI
+/// Borrador del formulario de ingreso mientras la app sigue abierta. Solo vive en memoria: la contraseña nunca se
+/// escribe en disco. Así, al salir un momento de la app y volver, no se pierde lo escrito.
+final class LoginDraft {
+    var name=""; var password=""; var confirmation=""
+    func clear() { name=""; password=""; confirmation="" }
+}
+@MainActor final class AccountModel: ObservableObject {
+    @Published var loading=true
+    @Published var busy=false
+    @Published var profile:AccessProfile?
+    @Published var error:String?
+    @Published var notice:String?
+    @Published var pending=false
+    @Published var role="MED"
+    /// Correo recién registrado que aún debe abrir el enlace de confirmación (pantalla "Revisa tu correo").
+    @Published var confirmationEmail:String?
+    /// Correo cuyo ingreso Supabase rechazó con email_not_confirmed: el ingreso ofrece reenviar el correo.
+    @Published var unconfirmedEmail:String?
+    @Published var sendingEmail=false
+    /// Cuándo se puede pedir otro correo de confirmación (Supabase permite uno por minuto).
+    @Published var resendAvailableAt:Date?
+    var webURL:String { config?.web ?? AuthRedirects.defaultWebURL }
+    private var revision=0
+    let draft=LoginDraft()
+    let auth:AuthService?
+    let api:APIClient?
+    private let config:AppConfiguration?
+    init() {
+        do { let config=try AppConfiguration.load(); let auth=AuthService(config:config); self.config=config; self.auth=auth; self.api=APIClient(config:config,auth:auth) }
+        catch { config=nil; auth=nil; api=nil; self.error=error.localizedDescription; loading=false }
+        // Sesión terminada por la API (SessionEnd): ya se borró del Keychain; se vuelve al ingreso sin datos en memoria.
+        if let api { Task { await api.setUnauthorizedHandler { [weak self] reason in await self?.sessionEnded(reason) } } }
+    }
+    /// The API withdrew access while restoring or signing in: that flow shows the revoked message instead of its own error.
+    private var accessRevoked=false
+    func sessionEnded(_ reason: SessionEnd) {
+        if reason == .revoked { accessRevoked=true }
+        guard profile != nil || pending else { return }
+        revision+=1; profile=nil; pending=false; busy=false; loading=false; notice=nil
+        // Automatic sign-out: local clinical drafts do not outlive the session (DraftStore).
+        DraftStore.shared.clearAll()
+        error=reason.message
+    }
+    /// Login screen with «Tu acceso fue retirado…» after a restore or sign-in whose session the API ended as revoked.
+    private func showRevoked() {
+        accessRevoked=false; profile=nil; pending=false; notice=nil
+        DraftStore.shared.clearAll()
+        error=SessionEnd.revoked.message
+    }
+    /// Al volver de segundo plano: con sesión abierta solo se verifica de nuevo el perfil (no se pierde lo que estaba en pantalla).
+    func resume() async {
+        if profile != nil { await refreshProfile() } else { await restore() }
+    }
+    /// Servicio de tiempo real con el token vigente de la sesión y la recuperación por /eventos tras una caída.
+    func makeRealtime() -> (any RealtimeService)? {
+        guard let config, let auth, let api else { return nil }
+        let url=RealtimeProtocol.websocketURL(supabaseURL:config.supabase.absoluteString,publishableKey:config.publicKey)
+        return SupabaseRealtimeService(
+            websocketURL:url,
+            accessToken:{ (try? await auth.session())?.access_token },
+            catchUp:{ cursor in
+                let data=try await api.getData(RealtimeProtocol.catchUpPath(after:cursor))
+                guard let recovered=RealtimeProtocol.parseCatchUp(data:data) else { throw ClientError.message("No se pudo recuperar lo ocurrido sin conexión.") }
+                return recovered
+            },
+            sockets:URLSessionRealtimeSocketFactory()
+        )
+    }
+    /// Vuelve a verificar roles y permisos sin pasar por la pantalla de carga (la usa el tiempo real).
+    func refreshProfile() async {
+        guard profile != nil, !busy else { return }
+        try? await verify()
+    }
+    func restore() async {
+        guard !busy, let auth else { return }; let stamp=revision; loading=true; accessRevoked=false
+        do {
+            guard try await auth.session() != nil else { profile=nil; pending=false; loading=false; return }
+            try await verify()
+        } catch {
+            guard stamp==revision else { return }
+            // Una cancelación no es un fallo: no muestra error ni ofrece reintento.
+            if accessRevoked { showRevoked() }
+            else if let message=SessionFailure.visibleMessage(for:error) { self.error=message; pending=true; profile=nil }
+        }
+        if stamp==revision { loading=false }
+    }
+    private func verify() async throws {
+        guard let api else { throw ClientError.message("Falta configurar el servidor.") }
+        let stamp=revision
+        let verified: AccessProfile
+        do { verified=try await api.get("/auth/me",as:AccessProfile.self) }
+        catch let failure as APIFailure {
+            // A refused own profile (403) means the account lost access; APIClient already ended a 401 itself.
+            if let end=SessionEndRules.afterProfile(status:failure.status) { await api.endSession(end) }
+            throw failure
+        }
+        guard stamp==revision else { throw CancellationError() }
+        // Un rol sin iOS (por ejemplo Recepción) no es un error: la pantalla muestra "Tu rol no usa esta aplicación".
+        draft.clear()
+        // After a successful sign-in or restore, drop drafts left by any other account on this device.
+        DraftStore.shared.retainOnly(user: verified.id)
+        profile=verified; if let first=verified.allowedIOSRoles.first { role=verified.allowedIOSRoles.contains(role) ? role : first }; pending=false; error=nil; notice=nil
+    }
+    func signIn(email:String,password:String) async {
+        guard !busy, let auth else { return }; let stamp=revision; busy=true; error=nil; notice=nil; unconfirmedEmail=nil; accessRevoked=false
+        var signedIn=false
+        do {
+            try await auth.signIn(email:email,password:password); signedIn=true
+            guard stamp==revision else { return }
+            // El perfil se publica solo cuando /auth/me responde: mientras tanto el botón sigue en carga y la pantalla no cambia.
+            try await verify()
+        } catch {
+            guard stamp==revision else { return }
+            if (error as? AuthFailure)?.isEmailNotConfirmed == true { unconfirmedEmail=email.trimmingCharacters(in:.whitespacesAndNewlines) }
+            if accessRevoked { showRevoked() }
+            else if let message=SessionFailure.visibleMessage(for:error) {
+                self.error=message
+                if SessionFailure.offersRetry(after:error,signedIn:signedIn) { pending=true }
+            }
+        }
+        if stamp==revision { busy=false }
+    }
+    /// Reenvía el correo de confirmación, como máximo uno por minuto (ResendCooldown).
+    func resendConfirmation(email:String) async {
+        guard !sendingEmail, ResendCooldown.remainingSeconds(until:resendAvailableAt,now:Date())==0, let auth else { return }
+        sendingEmail=true; error=nil; notice=nil
+        do {
+            try await auth.resendSignupConfirmation(email:email)
+            resendAvailableAt=ResendCooldown.availableAt(sentAt:Date())
+            notice="Te enviamos un nuevo correo de confirmación a \(email.trimmingCharacters(in:.whitespacesAndNewlines))."
+        } catch {
+            if (error as? AuthFailure)?.code=="over_email_send_rate_limit" { resendAvailableAt=ResendCooldown.availableAt(sentAt:Date()) }
+            self.error=SessionFailure.visibleMessage(for:error)
+        }
+        sendingEmail=false
+    }
+    /// "¿Olvidaste tu contraseña?": el enlace del correo abre /restablecer en la web. Misma respuesta exista o no la cuenta.
+    func requestPasswordReset(email:String) async {
+        let trimmed=email.trimmingCharacters(in:.whitespacesAndNewlines)
+        guard trimmed.range(of:#"^[^\s@]+@[^\s@]+$"#,options:.regularExpression) != nil else { error="Ingresa un correo válido."; notice=nil; return }
+        guard !sendingEmail, let auth else { return }
+        sendingEmail=true; error=nil; notice=nil
+        do {
+            try await auth.requestPasswordReset(email:trimmed)
+            notice="Si hay una cuenta con \(trimmed), te enviamos un enlace para crear una contraseña nueva. Revisa también la carpeta de spam."
+        } catch { self.error=SessionFailure.visibleMessage(for:error) }
+        sendingEmail=false
+    }
+    /// "Ya confirmé, iniciar sesión": vuelve al ingreso con el correo ya escrito.
+    func finishConfirmation() { confirmationEmail=nil; unconfirmedEmail=nil; error=nil; notice=nil }
+    func clearEmailFlow() { unconfirmedEmail=nil; error=nil; notice=nil }
+    func register(name:String,email:String,password:String,confirmation:String) async {
+        let errors=RegistrationRules.errors(name:name,email:email,password:password,confirmation:confirmation)
+        guard errors.isEmpty else { error=errors.joined(separator:" "); return }
+        guard !busy, let auth else { return }; let stamp=revision; busy=true; error=nil; accessRevoked=false
+        var savedSession=false
+        do {
+            let signedIn=try await auth.signUp(name:name,email:email,password:password)
+            guard stamp==revision else { return }
+            if signedIn { savedSession=true; try await verify() }
+            else { notice=nil; confirmationEmail=email.trimmingCharacters(in:.whitespacesAndNewlines); resendAvailableAt=ResendCooldown.availableAt(sentAt:Date()) }
+        } catch {
+            guard stamp==revision else { return }
+            if accessRevoked { showRevoked() }
+            else if let message=SessionFailure.visibleMessage(for:error) {
+                self.error=message
+                if SessionFailure.offersRetry(after:error,signedIn:savedSession) { pending=true }
+            }
+        }
+        if stamp==revision { busy=false }
+    }
+    /// Cerrar sesión borra también los borradores clínicos guardados en el dispositivo (DraftStore).
+    /// The 5-minute background sign-out in `CLIMESAApp` also ends here.
+    func logout() async { draft.clear(); DraftStore.shared.clearAll(); revision+=1; busy=true; loading=true; profile=nil; pending=false; notice=nil; error=nil; await auth?.signOut(); busy=false; loading=false }
+}
+struct Shift:Decodable,Identifiable {
+    let id:String; let area:String; let start:String; let end:String; let state:String
+    /// ASIS-01: asistencia derivada por la API (la entrada se confirma sola al iniciar) y tipo de turno (guardia de 24 h).
+    var version:Int?=nil; var attendance:String?=nil; var late:Bool?=nil; var type:String?=nil
+    static func display(_ value:String)->String {
+        // Same text as every other screen and the web: "16 nov, 09:33" (24 h, the year only when it is not this one).
+        guard ClimesaDates.parse(value) != nil else { return L.text("shift.unavailable") }
+        return ClimesaDates.display(value)
+    }
+}
+@MainActor final class ShiftModel:ObservableObject {
+    @Published var shifts:[Shift]=[]; @Published var loading=false; @Published var error:String?
+    func load(api:APIClient?) async { guard let api else { return }; loading=true; error=nil; do { shifts=try await api.get("/turnos/mios",as:[Shift].self) } catch { self.error=SessionFailure.visibleMessage(for:error) }; loading=false }
+}

@@ -1,0 +1,36 @@
+# Xcode / SwiftPM
+**/.build/
+**/build/
+**/DerivedData/
+**/xcuserdata/
+*.xcuserstate
+.swiftpm/
+
+# Configuración local: Config.xcconfig y DemoLogin.xcconfig no se suben.
+# Las configuraciones por compilación (Config/) no tienen secretos y sí se suben.
+*.xcconfig
+!*.xcconfig.example
+!Config/Debug.xcconfig
+!Config/Release.xcconfig
+
+# Artefactos
+*.ipa
+Payload/
+
+# Entorno
+**/.env
+**/.env.*
+!**/.env.example
+*.log
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Login de prueba (TEMPORAL): contraseñas de cuentas ficticias, nunca se suben
+demo-credenciales.json
+DemoLogin.xcconfig

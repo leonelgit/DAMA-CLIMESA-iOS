@@ -1,0 +1,214 @@
+import XCTest
+@testable import ClimesaCore
+
+final class PatientRulesTests: XCTestCase {
+    private let today = ClimesaDates.parse("2026-11-20T15:00:00Z")!
+
+    private func ticket(_ id: String, _ number: Int, _ state: QueueState, issued: String = "2026-11-20T14:00:00Z") -> QueueTicket {
+        let json = #"{"id":"\#(id)","service":"consulta_general","fecha":"2026-11-20","numero":\#(number),"patientId":null,"patientName":null,"state":"\#(state.rawValue)","officeId":null,"llamados":0,"version":1,"issuedAt":"\#(issued)"}"#
+        return try! JSONDecoder().decode(QueueTicket.self, from: Data(json.utf8))
+    }
+
+    func testFilaDelPaciente() {
+        let tickets = [ticket("a", 3, .atendido, issued: "2026-11-20T13:00:00Z"), ticket("b", 15, .enEspera)]
+        XCTAssertEqual(QueueRules.activeTicket(tickets)?.id, "b")
+        let called = [PublicQueue.Called(number: 10, office: "Consultorio 2", calls: 1), PublicQueue.Called(number: 11, office: nil, calls: 1)]
+        XCTAssertEqual(QueueRules.ahead(of: 15, called: called), 3)
+        XCTAssertEqual(QueueRules.ahead(of: 9, called: called), 0)
+        XCTAssertNil(QueueRules.ahead(of: 15, called: []))
+        XCTAssertEqual(QueueRules.office(for: 10, called: called), "Consultorio 2")
+    }
+
+    func testSiguienteNumeroParaElMedico() {
+        let tickets = [ticket("a", 7, .enEspera), ticket("b", 5, .enEspera), ticket("c", 2, .llamado)]
+        XCTAssertEqual(QueueRules.nextToCall(tickets)?.id, "b")
+        XCTAssertNil(QueueRules.nextToCall([ticket("c", 2, .llamado)]))
+    }
+
+    private func appointment(_ start: String, _ state: AppointmentState) -> Appointment {
+        let json = #"{"id":"\#(start)","patientId":"p1","patientName":null,"doctorId":"d1","doctorName":"Médico Ficticio","start":"\#(start)","end":"\#(start)","reason":null,"state":"\#(state.rawValue)","origin":"paciente","rejectionReason":null,"version":1}"#
+        return try! JSONDecoder().decode(Appointment.self, from: Data(json.utf8))
+    }
+
+    func testCitasProximasPasadasYCancelacion() {
+        let future = appointment("2026-11-25T15:00:00.000Z", .confirmada)
+        let past = appointment("2026-11-01T15:00:00.000Z", .atendida)
+        let cancelled = appointment("2026-11-26T15:00:00.000Z", .cancelada)
+        let split = AppointmentRules.split([past, cancelled, future], now: today)
+        XCTAssertEqual(split.upcoming.map(\.id), [future.id])
+        XCTAssertEqual(split.past.map(\.id), [cancelled.id, past.id])
+        XCTAssertTrue(AppointmentRules.canCancel(future, now: today))
+        XCTAssertFalse(AppointmentRules.canCancel(past, now: today))
+        XCTAssertNotNil(AppointmentRules.cancelReasonError("corto"))
+        XCTAssertNil(AppointmentRules.cancelReasonError("No puedo asistir ese día"))
+    }
+
+    func testSolicitudDeAmbulancia() {
+        XCTAssertTrue(AmbulanceRules.errors(address: "Colonia Ficticia, casa 1", reason: "Dolor fuerte", phone: "7000-0000").isEmpty)
+        let errors = AmbulanceRules.errors(address: "x", reason: "", phone: "12")
+        XCTAssertEqual(Set(errors.keys), ["address", "reason", "contactPhone"])
+        XCTAssertNil(AmbulanceRules.body(address: " Calle 1 ", municipality: " ", reason: "Caída", phone: "7000-0000").municipality)
+    }
+
+    func testValorDeLaboratorio() {
+        XCTAssertEqual(PatientLabRules.valueText(LabItemResult(value: 13.5, text: nil, mark: .normal)), "13.5")
+        XCTAssertEqual(PatientLabRules.valueText(LabItemResult(value: 7, text: nil, mark: nil)), "7")
+        XCTAssertEqual(PatientLabRules.valueText(LabItemResult(value: nil, text: "Negativo", mark: nil)), "Negativo")
+        XCTAssertEqual(PatientLabRules.valueText(nil), "—")
+    }
+}
+
+final class DoctorRulesTests: XCTestCase {
+    private func order(_ id: String, mark: String?, reviewed: Bool, completedAt: String) -> LabOrder {
+        let result = mark.map { #"{"value":1,"text":null,"mark":"\#($0)","version":1}"# } ?? "null"
+        let json = #"{"id":"\#(id)","consultationId":"k1","patientId":"p1","doctorId":"d1","priority":"rutina","state":"completado","createdAt":"2026-11-20T10:00:00Z","sampleTakenAt":null,"completedAt":"\#(completedAt)","reviewedAt":\#(reviewed ? "\"2026-11-20T18:00:00Z\"" : "null"),"version":1,"patientName":null,"items":[{"id":"i\#(id)","examId":"e1","code":"K","name":"Potasio","result":\#(result)}]}"#
+        return try! JSONDecoder().decode(LabOrder.self, from: Data(json.utf8))
+    }
+
+    func testLosCriticosVanPrimeroYLosRevisadosNoAparecen() {
+        let normal = order("1", mark: "normal", reviewed: false, completedAt: "2026-11-20T11:00:00Z")
+        let critical = order("2", mark: "critico_alto", reviewed: false, completedAt: "2026-11-20T12:00:00Z")
+        let reviewed = order("3", mark: "critico_bajo", reviewed: true, completedAt: "2026-11-20T09:00:00Z")
+        XCTAssertEqual(ReviewRules.pending([normal, reviewed, critical]).map(\.id), ["2", "1"])
+        XCTAssertTrue(ReviewRules.isCritical(critical))
+        XCTAssertFalse(ReviewRules.isCritical(normal))
+    }
+
+    func testValidacionesDeConsultaYAlta() {
+        XCTAssertNil(ConsultationRules.diagnosisCodeError("J06.9"))
+        XCTAssertNotNil(ConsultationRules.diagnosisCodeError(" "))
+        XCTAssertNotNil(ConsultationRules.prescriptionError(PrescriptionItemBody(medication: "Acetaminofén", dose: "", route: "oral", frequency: "c/8h", duration: "3 días", instructions: nil)))
+        XCTAssertTrue(ConsultationRules.isEditable(.abierta))
+        XCTAssertFalse(ConsultationRules.isEditable(.firmada))
+        XCTAssertNotNil(DischargeRules.errors(type: .voluntaria, summary: "", voluntaryConsent: false, pending: [])["voluntaryConsent"])
+        XCTAssertNotNil(DischargeRules.errors(type: .medica, summary: "", voluntaryConsent: false, pending: [DischargePendingBody(description: "Control", responsible: "")])["pending"])
+        XCTAssertTrue(DischargeRules.errors(type: .medica, summary: "Evolución favorable, control en una semana.", voluntaryConsent: false, pending: []).isEmpty)
+    }
+}
+
+final class DatesAndLiveTopicTests: XCTestCase {
+    func testDiaLocalDeElSalvador() {
+        // 2026-11-21T03:00Z es todavía el 20 en El Salvador (UTC-6).
+        XCTAssertEqual(ClimesaDates.localDay(ClimesaDates.parse("2026-11-21T03:00:00.000Z")!), "2026-11-20")
+        let range = ClimesaDates.dayRange(ClimesaDates.parse("2026-11-20T15:00:00Z")!)
+        XCTAssertEqual(range.from, "2026-11-20T06:00:00.000Z")
+        XCTAssertEqual(range.to, "2026-11-21T06:00:00.000Z")
+        XCTAssertEqual(ClimesaDates.display(nil), "—")
+    }
+
+    /// I6: the same text as the web (`formatDateTime`, `formatDate`, `formatTime`): 24 h whatever the phone uses,
+    /// es_SV month names and the year only when it is not the current one.
+    func testDisplayUsesTheWebTextWith24HoursAndNoCurrentYear() throws {
+        let now = try XCTUnwrap(ClimesaDates.parse("2026-11-20T15:00:00.000Z"))
+        // 2026-11-16T21:33Z is 15:33 in El Salvador (UTC-6).
+        XCTAssertEqual(ClimesaDates.display("2026-11-16T21:33:00.000Z", now: now), "16 nov, 15:33")
+        XCTAssertEqual(ClimesaDates.display("2026-11-16T21:33:00.000Z", .date, now: now), "16 nov")
+        XCTAssertEqual(ClimesaDates.display("2026-11-16T15:05:00Z", .time, now: now), "09:05")
+        XCTAssertEqual(ClimesaDates.display("2025-03-03T15:05:00Z", now: now), "3 mar 2025, 09:05")
+        XCTAssertEqual(ClimesaDates.display("2025-03-03T15:05:00Z", .date, now: now), "3 mar 2025")
+        // 2026-01-01T03:00Z is still 31 Dec 2025 in El Salvador: the local year decides.
+        XCTAssertEqual(ClimesaDates.display("2026-01-01T03:00:00Z", .date, now: now), "31 dic 2025")
+        XCTAssertEqual(ClimesaDates.display("2026-11-20"), "2026-11-20")
+        XCTAssertEqual(ClimesaDates.display("no es fecha"), "—")
+    }
+
+    /// I8: the ambulance position arrives every few seconds and reloads no screen; the other ambulance events do.
+    func testAmbulanceLocationReloadsNothing() {
+        XCTAssertEqual(InvalidationRule.topics(for: DomainEvent(type: "ambulancia.ubicacion", entity: "servicio", id: "s1", version: 3)), [])
+        XCTAssertEqual(InvalidationRule.topics(for: DomainEvent(type: "ambulancia.hito", entity: "servicio", id: "s1", version: 3)), [.ambulance])
+        let next = LiveReducer.apply(.event(DomainEvent(type: "ambulancia.ubicacion", entity: "servicio", id: "s1", version: 4)), to: LiveSnapshot())
+        XCTAssertEqual(next.version(.ambulance), 0)
+    }
+
+    /// I4 and I5: the ambulance texts are the web's (`milestoneNames`) and Android's (`AmbulanceLabels`).
+    func testAmbulanceLabelsMatchWebAndAndroid() {
+        XCTAssertEqual(AmbulanceRules.milestoneLabel("salida"), "Salida")
+        XCTAssertEqual(AmbulanceRules.milestoneLabel("en_escena"), "En escena")
+        XCTAssertEqual(AmbulanceRules.milestoneLabel("trasladando"), "Trasladando")
+        XCTAssertEqual(AmbulanceRules.milestoneLabel("en_hospital"), "En hospital")
+        XCTAssertEqual(AmbulanceRules.milestoneLabel("finalizado"), "Finalizado")
+        XCTAssertEqual(AmbulanceRequestState.descartada.label, "No se pudo atender")
+        XCTAssertEqual(AmbulanceRequestState.porConfirmar.label, "Por confirmar")
+        XCTAssertEqual(AmbulanceRequestState.cancelada.label, "Cancelada")
+    }
+
+    func testCadaEventoInvalidaSuGrupo() {
+        let fila = DomainEvent(type: "fila.actualizada", entity: "ticket_fila", id: "t1", version: 2)
+        let next = LiveReducer.apply(.event(fila), to: LiveSnapshot())
+        XCTAssertEqual(next.version(.queue), 1)
+        XCTAssertEqual(next.version(.appointments), 0)
+        XCTAssertEqual(next.lastEvent, fila)
+        let link = DomainEvent(type: "vinculacion.resuelta", entity: "vinculacion_paciente", id: "v1", version: 2)
+        let linked = LiveReducer.apply(.event(link), to: next)
+        XCTAssertEqual(linked.profileVersion, 1)
+        XCTAssertEqual(linked.version(.link), 1)
+        XCTAssertEqual(InvalidationRule.topics(for: DomainEvent(type: "laboratorio.critico", entity: "orden_laboratorio", id: "o1", version: 1)), [.laboratory])
+    }
+
+    func testReconectarInvalidaTodo() {
+        let next = LiveReducer.apply(.resync, to: LiveSnapshot())
+        XCTAssertTrue(LiveTopic.allCases.allSatisfy { next.version($0) == 1 })
+        XCTAssertEqual(next.version([.queue, .appointments]), 2)
+    }
+
+    /// MA-AMB-05: la solicitud propia sale del servidor; la pantalla sigue la activa y solo ofrece cancelar si la API lo permite.
+    func testSinSolicitudActivaSeMuestraLaUltimaConSuMotivoDeDescarte() throws {
+        let json = """
+        [{"id":"r2","state":"descartada","channel":"app_paciente","address":"Colonia Ficticia","reason":"Caída","createdAt":"2026-11-15T14:00:00Z","version":2,
+          "service":null,"allowedActions":[],"notice":"x","discardReason":"Se resolvió por teléfono"},
+         {"id":"r1","state":"cancelada","channel":"app_paciente","address":"A","reason":"B","createdAt":"2026-11-14T10:00:00Z","version":2,"service":null,"allowedActions":[],"notice":"x"}]
+        """
+        let requests = try JSONDecoder().decode([OwnAmbulanceRequest].self, from: Data(json.utf8))
+        XCTAssertNil(AmbulanceRules.active(requests))
+        let last = try XCTUnwrap(AmbulanceRules.latestResolved(requests))
+        XCTAssertEqual(last.id, "r2")
+        XCTAssertEqual(last.discardReason, "Se resolvió por teléfono")
+        XCTAssertNil(requests[1].discardReason)
+        XCTAssertEqual(AmbulanceRules.progress(last), "Despacho no pudo atender esta solicitud: Se resolvió por teléfono. Si hay riesgo de vida, llama al 911.")
+        XCTAssertEqual(AmbulanceRules.progress(requests[1]), "Cancelaste esta solicitud.")
+        XCTAssertEqual(AmbulanceRules.tagValue(last).value, "descartada")
+        let finished = """
+        [{"id":"r3","state":"confirmada","channel":"app_paciente","address":"A","reason":"B","createdAt":"2026-11-15T14:00:00Z","version":2,
+          "service":{"dispatchedAt":"2026-11-15T14:05:00Z","milestones":[],"finalState":"completado","finishedAt":"2026-11-15T15:00:00Z"},"allowedActions":[],"notice":"x"},
+         {"id":"r0","state":"por_confirmar","channel":"app_paciente","address":"A","reason":"B","createdAt":"2026-11-14T10:00:00Z","version":1,"service":null,"allowedActions":[],"notice":"x"}]
+        """
+        let withActive = try JSONDecoder().decode([OwnAmbulanceRequest].self, from: Data(finished.utf8))
+        XCTAssertNil(AmbulanceRules.latestResolved(withActive))
+        XCTAssertEqual(AmbulanceRules.tagValue(withActive[0]).value, "completado")
+    }
+
+    func testSolicitudPropiaDeAmbulancia() throws {
+        let json = """
+        [{"id":"r2","state":"confirmada","channel":"app_paciente","address":"Colonia Ficticia","reason":"Caída","createdAt":"2026-11-15T14:00:00Z","version":2,
+          "service":{"dispatchedAt":"2026-11-15T14:05:00Z","milestones":[{"type":"salida","occurredAt":"2026-11-15T14:07:00Z"}],"finalState":null,"finishedAt":null},
+          "allowedActions":[],"notice":"Si hay riesgo de vida, llama al 911."},
+         {"id":"r1","state":"por_confirmar","channel":"app_paciente","address":"A","reason":"B","createdAt":"2026-11-14T10:00:00Z","version":1,"service":null,"allowedActions":["cancelar"],"notice":"x"}]
+        """
+        let requests = try JSONDecoder().decode([OwnAmbulanceRequest].self, from: Data(json.utf8))
+        let active = try XCTUnwrap(AmbulanceRules.active(requests))
+        XCTAssertEqual(active.id, "r2")
+        XCTAssertFalse(active.canCancel)
+        XCTAssertTrue(requests[1].canCancel)
+        XCTAssertEqual(AmbulanceRules.progress(active), "La ambulancia va en camino.")
+        XCTAssertEqual(AmbulanceFinalState(rawValue: "desviado")?.label, "Desviado a otro centro")
+    }
+
+    /// MA-AMB-04: "Marcar recibido" depende de `allowedActions`.
+    func testEntregaDelPacienteSegunLaApi() throws {
+        let json = """
+        {"serviceId":"s1","active":true,"priority":"roja","clinical":true,"reports":[],"version":7,"arrived":true,"handover":null,"allowedActions":["recibir"]}
+        """
+        let view = try JSONDecoder().decode(PrehospitalView.self, from: Data(json.utf8))
+        XCTAssertTrue(view.canReceive)
+        XCTAssertEqual(view.version, 7)
+        // La entrega no lleva cuerpo ni versión; la llegada se encuentra aunque no haya evento ni reporte.
+        XCTAssertEqual(String(decoding: try JSONBody.encode(EmptyBody()), as: UTF8.self), "{}")
+        let none = try JSONDecoder().decode(ArrivalService.self, from: Data(#"{"serviceId":null,"services":[]}"#.utf8))
+        XCTAssertNil(none.pick(nil))
+        // Re-revisión #117: el que llegó sin entrega va primero aunque la unidad ya salió a otro; la elección se respeta mientras siga listada.
+        let two = try JSONDecoder().decode(ArrivalService.self, from: Data(#"{"serviceId":"a1","services":[{"serviceId":"a1","dispatchedAt":"2026-11-15T14:00:00Z","active":false,"arrived":true},{"serviceId":"s1","dispatchedAt":"2026-11-15T15:00:00Z","active":true,"arrived":false}]}"#.utf8))
+        XCTAssertEqual(two.pick(nil), "a1")
+        XCTAssertEqual(two.pick("s1"), "s1")
+        XCTAssertEqual(two.pick("gone"), "a1")
+    }
+}

@@ -1,0 +1,6386 @@
+{
+  "sourceLanguage": "es",
+  "strings": {
+    "results.release.followUp": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proponer cita de seguimiento"
+          }
+        }
+      }
+    },
+    "results.release.followUp.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recepción recibe la propuesta con el médico que pidió la orden."
+          }
+        }
+      }
+    },
+    "results.release.note": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota para el paciente (opcional)"
+          }
+        }
+      }
+    },
+    "appointments.next": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu próxima cita"
+          }
+        }
+      }
+    },
+    "appointments.cancel.other": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuéntanos el motivo"
+          }
+        }
+      }
+    },
+    "queue.called.ok": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entendido"
+          }
+        }
+      }
+    },
+    "home.appointment.today": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoy tienes cita"
+          }
+        }
+      }
+    },
+    "home.labs.new": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nuevos"
+          }
+        }
+      }
+    },
+    "consultation.sign.record": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo que se firma"
+          }
+        }
+      }
+    },
+    "consultation.sign.goTo": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ir a %@"
+          }
+        }
+      }
+    },
+    "lab.ordered.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya ordenado en esta consulta"
+          }
+        }
+      }
+    },
+    "consultation.step.count": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld registrados"
+          }
+        }
+      }
+    },
+    "results.followUp.open": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver valores"
+          }
+        }
+      }
+    },
+    "results.release": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisar y liberar"
+          }
+        }
+      }
+    },
+    "results.release.confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Liberar los resultados al paciente?"
+          }
+        }
+      }
+    },
+    "discharge.done.back": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a hospitalizados"
+          }
+        }
+      }
+    },
+    "day.queue.absent.failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: no se envió «No se presentó». %@"
+          }
+        }
+      }
+    },
+    "day.queue.absent.discard": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descartar"
+          }
+        }
+      }
+    },
+    "ds.paciente.queue.number": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu número"
+          }
+        }
+      }
+    },
+    "ds.paciente.home.pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exámenes pendientes"
+          }
+        }
+      }
+    },
+    "ds.paciente.home.ready": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultados listos"
+          }
+        }
+      }
+    },
+    "ds.retry": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a intentar"
+          }
+        }
+      }
+    },
+    "ds.reload": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar y recargar"
+          }
+        }
+      }
+    },
+    "ds.live": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En vivo"
+          }
+        }
+      }
+    },
+    "ds.loading": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando…"
+          }
+        }
+      }
+    },
+    "ds.skeleton": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando información…"
+          }
+        }
+      }
+    },
+    "ds.legend.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leyenda de colores y estados"
+          }
+        }
+      }
+    },
+    "ds.legend.areas": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Áreas"
+          }
+        }
+      }
+    },
+    "ds.legend.statuses": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estados"
+          }
+        }
+      }
+    },
+    "ds.legend.priority": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prioridad"
+          }
+        }
+      }
+    },
+    "ds.empty.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin información todavía"
+          }
+        }
+      }
+    },
+    "ds.conflict.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alguien cambió este registro mientras lo tenías abierto; tus cambios no se guardaron."
+          }
+        }
+      }
+    },
+    "brand.tagline": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hospital universitario"
+          }
+        }
+      }
+    },
+    "common.retry": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a intentar"
+          }
+        }
+      }
+    },
+    "common.logout": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar sesión"
+          }
+        }
+      }
+    },
+    "root.verifying": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificando tu acceso…"
+          }
+        }
+      }
+    },
+    "root.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu acceso"
+          }
+        }
+      }
+    },
+    "root.fallback_error": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo verificar tu acceso. Vuelve a intentar."
+          }
+        }
+      }
+    },
+    "auth.headline.register": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crea tu cuenta de paciente"
+          }
+        }
+      }
+    },
+    "auth.headline.login": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresa con tu cuenta del hospital"
+          }
+        }
+      }
+    },
+    "auth.name": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nombre completo"
+          }
+        }
+      }
+    },
+    "auth.demo.banner": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo de prueba: cuentas ficticias"
+          }
+        }
+      }
+    },
+    "auth.demo.choose": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige un rol"
+          }
+        }
+      }
+    },
+    "auth.demo.selector": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuenta de prueba"
+          }
+        }
+      }
+    },
+    "auth.email": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Correo electrónico"
+          }
+        }
+      }
+    },
+    "auth.email.placeholder": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tu@correo.com"
+          }
+        }
+      }
+    },
+    "auth.password": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contraseña"
+          }
+        }
+      }
+    },
+    "auth.password.placeholder": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu contraseña"
+          }
+        }
+      }
+    },
+    "auth.confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirmar contraseña"
+          }
+        }
+      }
+    },
+    "auth.confirm.placeholder": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repite tu contraseña"
+          }
+        }
+      }
+    },
+    "auth.password.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "8 caracteres, mayúscula, minúscula, número y símbolo."
+          }
+        }
+      }
+    },
+    "auth.submit.register": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crear cuenta"
+          }
+        }
+      }
+    },
+    "auth.submit.login": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresar"
+          }
+        }
+      }
+    },
+    "auth.switch.register": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya tengo cuenta. Ingresar"
+          }
+        }
+      }
+    },
+    "auth.switch.login": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eres paciente? Crear cuenta"
+          }
+        }
+      }
+    },
+    "auth.footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu cuenta es personal. Cierra sesión al terminar."
+          }
+        }
+      }
+    },
+    "tab.miDia": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi día"
+          }
+        }
+      }
+    },
+    "tab.pacientes": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacientes"
+          }
+        }
+      }
+    },
+    "tab.resultados": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultados"
+          }
+        }
+      }
+    },
+    "tab.turnos": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turnos"
+          }
+        }
+      }
+    },
+    "tab.perfil": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfil"
+          }
+        }
+      }
+    },
+    "tab.inicio": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio"
+          }
+        }
+      }
+    },
+    "tab.fila": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fila"
+          }
+        }
+      }
+    },
+    "tab.citas": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Citas"
+          }
+        }
+      }
+    },
+    "tab.examenes": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exámenes"
+          }
+        }
+      }
+    },
+    "tab.mas": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más"
+          }
+        }
+      }
+    },
+    "role.MED": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medicina"
+          }
+        }
+      }
+    },
+    "role.PAC": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paciente"
+          }
+        }
+      }
+    },
+    "unsupported.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu rol no usa esta aplicación"
+          }
+        }
+      }
+    },
+    "unsupported.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta cuenta no tiene un rol de Médico o Paciente con acceso a iOS. Usa la plataforma asignada a tu rol."
+          }
+        }
+      }
+    },
+    "live.reconnecting": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recuperando la conexión…"
+          }
+        }
+      }
+    },
+    "live.offline": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin conexión. Los datos pueden estar desactualizados."
+          }
+        }
+      }
+    },
+    "profile.welcome": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenido"
+          }
+        }
+      }
+    },
+    "profile.roles": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Roles: %@"
+          }
+        }
+      }
+    },
+    "profile.work_role": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rol de trabajo"
+          }
+        }
+      }
+    },
+    "profile.refresh": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualizar acceso"
+          }
+        }
+      }
+    },
+    "shifts.loading": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consultando tus turnos…"
+          }
+        }
+      }
+    },
+    "shifts.empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes turnos publicados."
+          }
+        }
+      }
+    },
+    "shifts.past": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turnos anteriores"
+          }
+        }
+      }
+    },
+    "shifts.until": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta %@"
+          }
+        }
+      }
+    },
+    "shifts.published": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Publicado"
+          }
+        }
+      }
+    },
+    "shift.unavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha no disponible"
+          }
+        }
+      }
+    },
+    "accesses.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nadie ha consultado tu expediente."
+          }
+        }
+      }
+    },
+    "admission.category": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Habitación"
+          }
+        }
+      }
+    },
+    "admission.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hospitalización indicada. Admisiones asignará la cama."
+          }
+        }
+      }
+    },
+    "admission.isolation": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Requiere aislamiento"
+          }
+        }
+      }
+    },
+    "admission.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo de la hospitalización (10 a 500 caracteres)"
+          }
+        }
+      }
+    },
+    "admission.submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indicar hospitalización"
+          }
+        }
+      }
+    },
+    "admission.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hospitalización"
+          }
+        }
+      }
+    },
+    "admission.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se indica desde esta consulta y a tu nombre como médico tratante. Admisiones asignará la cama."
+          }
+        }
+      }
+    },
+    "admission.later": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora no"
+          }
+        }
+      }
+    },
+    "ambulance.address": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dirección donde está el paciente"
+          }
+        }
+      }
+    },
+    "ambulance.call911": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llamar al 911"
+          }
+        }
+      }
+    },
+    "ambulance.emergency": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si hay riesgo de vida, llama al 911 ahora. Esta solicitud la confirma la central por teléfono."
+          }
+        }
+      }
+    },
+    "ambulance.municipality": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Municipio (opcional)"
+          }
+        }
+      }
+    },
+    "ambulance.phone": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teléfono de contacto"
+          }
+        }
+      }
+    },
+    "ambulance.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qué está pasando"
+          }
+        }
+      }
+    },
+    "ambulance.status": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estado de tu solicitud"
+          }
+        }
+      }
+    },
+    "ambulance.submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar solicitud"
+          }
+        }
+      }
+    },
+    "ambulance.update.milestone": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La ambulancia registró un avance del servicio."
+          }
+        }
+      }
+    },
+    "ambulance.update.state": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La central actualizó tu solicitud. Te llamarán al teléfono indicado."
+          }
+        }
+      }
+    },
+    "appointments.cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar cita"
+          }
+        }
+      }
+    },
+    "appointments.cancel.confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirmar cancelación"
+          }
+        }
+      }
+    },
+    "appointments.cancel.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo de la cancelación (10 a 500 caracteres)"
+          }
+        }
+      }
+    },
+    "appointments.cancel.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar cita"
+          }
+        }
+      }
+    },
+    "appointments.cancelled": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La cita se canceló."
+          }
+        }
+      }
+    },
+    "appointments.date": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha"
+          }
+        }
+      }
+    },
+    "appointments.doctor": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Médico"
+          }
+        }
+      }
+    },
+    "appointments.doctor.choose": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige un médico"
+          }
+        }
+      }
+    },
+    "appointments.past": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasadas"
+          }
+        }
+      }
+    },
+    "appointments.past.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin citas pasadas."
+          }
+        }
+      }
+    },
+    "appointments.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo (opcional)"
+          }
+        }
+      }
+    },
+    "appointments.rejected.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo del rechazo: %@"
+          }
+        }
+      }
+    },
+    "appointments.request": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedir cita"
+          }
+        }
+      }
+    },
+    "appointments.request.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedir cita"
+          }
+        }
+      }
+    },
+    "appointments.requested": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solicitud enviada. La confirmación llegará en vivo."
+          }
+        }
+      }
+    },
+    "appointments.slots": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horarios libres"
+          }
+        }
+      }
+    },
+    "appointments.slots.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay horarios libres ese día."
+          }
+        }
+      }
+    },
+    "appointments.submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solicitar cita"
+          }
+        }
+      }
+    },
+    "appointments.upcoming": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Próximas"
+          }
+        }
+      }
+    },
+    "appointments.upcoming.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes citas próximas."
+          }
+        }
+      }
+    },
+    "arrival.dispatched": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Despachada a las %@"
+          }
+        }
+      }
+    },
+    "arrival.eta": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llegada estimada: %@"
+          }
+        }
+      }
+    },
+    "arrival.noClinical": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu permiso muestra la llegada sin el contenido clínico."
+          }
+        }
+      }
+    },
+    "arrival.noReport": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todavía no hay reporte prehospital."
+          }
+        }
+      }
+    },
+    "arrival.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay una ambulancia en servicio."
+          }
+        }
+      }
+    },
+    "arrival.receive.pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marcar la recepción del paciente todavía no está disponible en la API."
+          }
+        }
+      }
+    },
+    "common.close": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar"
+          }
+        }
+      }
+    },
+    "common.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo"
+          }
+        }
+      }
+    },
+    "common.loading": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando…"
+          }
+        }
+      }
+    },
+    "consultation.diagnoses": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagnósticos"
+          }
+        }
+      }
+    },
+    "consultation.diagnosis.add": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar diagnóstico"
+          }
+        }
+      }
+    },
+    "consultation.diagnosis.note": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota (opcional)"
+          }
+        }
+      }
+    },
+    "consultation.exam": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Examen físico"
+          }
+        }
+      }
+    },
+    "consultation.notes": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo, examen y plan"
+          }
+        }
+      }
+    },
+    "consultation.plan": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plan"
+          }
+        }
+      }
+    },
+    "consultation.prescriptions": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Receta"
+          }
+        }
+      }
+    },
+    "consultation.principal": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Principal"
+          }
+        }
+      }
+    },
+    "consultation.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo de consulta"
+          }
+        }
+      }
+    },
+    "consultation.save": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar borrador"
+          }
+        }
+      }
+    },
+    "consultation.saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrador guardado."
+          }
+        }
+      }
+    },
+    "consultation.sign": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Firmar consulta"
+          }
+        }
+      }
+    },
+    "consultation.signed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consulta firmada."
+          }
+        }
+      }
+    },
+    "consultation.start": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar consulta"
+          }
+        }
+      }
+    },
+    "consultation.ticket": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Número %ld"
+          }
+        }
+      }
+    },
+    "consultation.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consulta"
+          }
+        }
+      }
+    },
+    "consultation.vitals": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signos vitales"
+          }
+        }
+      }
+    },
+    "consultation.vitals.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El asistente todavía no registra signos."
+          }
+        }
+      }
+    },
+    "day.agenda": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Citas del día"
+          }
+        }
+      }
+    },
+    "day.agenda.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes citas hoy."
+          }
+        }
+      }
+    },
+    "day.attend": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atender"
+          }
+        }
+      }
+    },
+    "day.more": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seguimiento"
+          }
+        }
+      }
+    },
+    "day.patient.unknown": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paciente"
+          }
+        }
+      }
+    },
+    "day.queue": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fila"
+          }
+        }
+      }
+    },
+    "day.queue.callNext": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llamar siguiente"
+          }
+        }
+      }
+    },
+    "day.queue.called": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Número %ld llamado."
+          }
+        }
+      }
+    },
+    "day.queue.waiting": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%ld en espera en consulta general"
+          }
+        }
+      }
+    },
+    "day.record": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expediente"
+          }
+        }
+      }
+    },
+    "day.results.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultados por revisar"
+          }
+        }
+      }
+    },
+    "discharge.consent": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El paciente firmó el consentimiento"
+          }
+        }
+      }
+    },
+    "discharge.pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendientes y responsables"
+          }
+        }
+      }
+    },
+    "discharge.pending.add": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar pendiente"
+          }
+        }
+      }
+    },
+    "discharge.pending.description": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendiente"
+          }
+        }
+      }
+    },
+    "discharge.pending.responsible": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Responsable"
+          }
+        }
+      }
+    },
+    "discharge.sign": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Firmar alta"
+          }
+        }
+      }
+    },
+    "discharge.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resumen (opcional, 10 a 2000 caracteres)"
+          }
+        }
+      }
+    },
+    "discharge.type": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo de alta"
+          }
+        }
+      }
+    },
+    "exams.detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detalle del examen"
+          }
+        }
+      }
+    },
+    "exams.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes exámenes."
+          }
+        }
+      }
+    },
+    "exams.unlinked": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vincula tu expediente en Más para ver esta información."
+          }
+        }
+      }
+    },
+    "exams.waiting_review": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los valores aparecen cuando tu médico los revise."
+          }
+        }
+      }
+    },
+    "history.admissions": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hospitalizaciones"
+          }
+        }
+      }
+    },
+    "history.consultation": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consulta"
+          }
+        }
+      }
+    },
+    "history.consultations": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consultas"
+          }
+        }
+      }
+    },
+    "history.doctor.unknown": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Médico no disponible"
+          }
+        }
+      }
+    },
+    "history.laboratory": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultados"
+          }
+        }
+      }
+    },
+    "history.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin registros."
+          }
+        }
+      }
+    },
+    "home.appointment": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Próxima cita"
+          }
+        }
+      }
+    },
+    "home.appointment.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes citas próximas."
+          }
+        }
+      }
+    },
+    "home.labs": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exámenes"
+          }
+        }
+      }
+    },
+    "home.labs.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%ld en proceso o en revisión · %ld con resultados"
+          }
+        }
+      }
+    },
+    "home.notices": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos"
+          }
+        }
+      }
+    },
+    "notice.until": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vigente hasta %@"
+          }
+        }
+      }
+    },
+    "home.open": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver"
+          }
+        }
+      }
+    },
+    "home.queue": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi número de fila"
+          }
+        }
+      }
+    },
+    "home.queue.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes un número activo."
+          }
+        }
+      }
+    },
+    "home.unlinked.action": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vincular expediente"
+          }
+        }
+      }
+    },
+    "home.unlinked.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pide en Recepción que anoten tu correo en tu expediente para ver tus exámenes e historial."
+          }
+        }
+      }
+    },
+    "home.unlinked.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu cuenta no está vinculada"
+          }
+        }
+      }
+    },
+    "hospital.beds": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%ld libres de %ld camas"
+          }
+        }
+      }
+    },
+    "hospital.doctors": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Médicos de turno"
+          }
+        }
+      }
+    },
+    "hospital.doctors.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay médicos de turno publicados."
+          }
+        }
+      }
+    },
+    "hospital.floor": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Planta %ld"
+          }
+        }
+      }
+    },
+    "hospital.notices.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay avisos vigentes."
+          }
+        }
+      }
+    },
+    "hospital.occupancy": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocupación"
+          }
+        }
+      }
+    },
+    "hospital.unavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La ocupación no está disponible."
+          }
+        }
+      }
+    },
+    "hospital.until": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta las %@"
+          }
+        }
+      }
+    },
+    "hospitalized.bed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cama %@"
+          }
+        }
+      }
+    },
+    "hospitalized.discharge": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Firmar alta"
+          }
+        }
+      }
+    },
+    "hospitalized.isolation": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aislamiento"
+          }
+        }
+      }
+    },
+    "hospitalized.noBed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esperando cama"
+          }
+        }
+      }
+    },
+    "hospitalized.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes pacientes hospitalizados."
+          }
+        }
+      }
+    },
+    "lab.order": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Órdenes de laboratorio"
+          }
+        }
+      }
+    },
+    "lab.ordered": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orden enviada al laboratorio."
+          }
+        }
+      }
+    },
+    "lab.panel": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Panel"
+          }
+        }
+      }
+    },
+    "lab.priority": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prioridad"
+          }
+        }
+      }
+    },
+    "lab.submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordenar exámenes"
+          }
+        }
+      }
+    },
+    "link.approved": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu cuenta ya está vinculada con tu expediente."
+          }
+        }
+      }
+    },
+    "link.status": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vinculación"
+          }
+        }
+      }
+    },
+    "patients.inactive": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inactivo"
+          }
+        }
+      }
+    },
+    "patients.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin resultados."
+          }
+        }
+      }
+    },
+    "patients.record": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expediente"
+          }
+        }
+      }
+    },
+    "patients.search": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nombre, DUI o expediente"
+          }
+        }
+      }
+    },
+    "patients.search.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escribe al menos 2 letras."
+          }
+        }
+      }
+    },
+    "queue.ahead": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Faltan aproximadamente %ld números antes del tuyo"
+          }
+        }
+      }
+    },
+    "queue.called": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¡Es tu turno! Acércate a la atención."
+          }
+        }
+      }
+    },
+    "queue.called.office": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¡Es tu turno! Pasa al %@."
+          }
+        }
+      }
+    },
+    "queue.issued": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Emitido a las %@"
+          }
+        }
+      }
+    },
+    "queue.none.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuando recepción te dé un número, aparecerá aquí y cambiará en vivo."
+          }
+        }
+      }
+    },
+    "queue.none.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin número activo"
+          }
+        }
+      }
+    },
+    "results.critical": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crítico"
+          }
+        }
+      }
+    },
+    "results.critical.notice": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta orden tiene un valor crítico."
+          }
+        }
+      }
+    },
+    "results.detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado"
+          }
+        }
+      }
+    },
+    "results.followUp.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultados por revisar"
+          }
+        }
+      }
+    },
+    "results.followUp.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Al día: no tienes resultados por revisar."
+          }
+        }
+      }
+    },
+    "results.followUp.patient": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paciente"
+          }
+        }
+      }
+    },
+    "results.followUp.observation": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Observación"
+          }
+        }
+      }
+    },
+    "results.followUp.review": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marcar como revisado"
+          }
+        }
+      }
+    },
+    "results.followUp.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marcado como revisado."
+          }
+        }
+      }
+    },
+    "results.external.send": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se realiza en otro sitio"
+          }
+        }
+      }
+    },
+    "results.external.place": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dónde se realiza"
+          }
+        }
+      }
+    },
+    "results.external.instructions": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instrucciones para el paciente"
+          }
+        }
+      }
+    },
+    "results.external.confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar a externo"
+          }
+        }
+      }
+    },
+    "results.external.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La orden quedó como externa; el paciente ya ve dónde ir."
+          }
+        }
+      }
+    },
+    "exams.external.place": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se realiza en otro sitio: %@"
+          }
+        }
+      }
+    },
+    "exams.external.noPlace": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "lugar por confirmar"
+          }
+        }
+      }
+    },
+    "exams.observation": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Observación: %@"
+          }
+        }
+      }
+    },
+    "exams.observation.relevant": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Observación relevante (enviada al médico): %@"
+          }
+        }
+      }
+    },
+    "results.markReviewed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marcar revisado"
+          }
+        }
+      }
+    },
+    "results.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay resultados por revisar."
+          }
+        }
+      }
+    },
+    "results.toReview": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por revisar"
+          }
+        }
+      }
+    },
+    "rx.addLine": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar medicamento"
+          }
+        }
+      }
+    },
+    "rx.dose": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dosis"
+          }
+        }
+      }
+    },
+    "rx.duration": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duración"
+          }
+        }
+      }
+    },
+    "rx.frequency": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frecuencia"
+          }
+        }
+      }
+    },
+    "rx.instructions": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indicaciones (opcional)"
+          }
+        }
+      }
+    },
+    "rx.issue": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Emitir receta"
+          }
+        }
+      }
+    },
+    "rx.issued": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Receta emitida."
+          }
+        }
+      }
+    },
+    "rx.medication": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medicamento"
+          }
+        }
+      }
+    },
+    "rx.route": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vía"
+          }
+        }
+      }
+    },
+    "section.accesos": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quién vio mi expediente"
+          }
+        }
+      }
+    },
+    "section.ambulancia": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedir ambulancia"
+          }
+        }
+      }
+    },
+    "section.historial": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi historial"
+          }
+        }
+      }
+    },
+    "section.hospital": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Información del hospital"
+          }
+        }
+      }
+    },
+    "section.hospitalizados": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis hospitalizados"
+          }
+        }
+      }
+    },
+    "section.llegadaAmbulancia": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llegada de ambulancia"
+          }
+        }
+      }
+    },
+    "section.perfil": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfil"
+          }
+        }
+      }
+    },
+    "section.vinculacion": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vincular expediente"
+          }
+        }
+      }
+    },
+    "ds.medico.stat.hospitalized": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hospitalizados"
+          }
+        }
+      }
+    },
+    "ds.medico.prehospital": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reporte prehospital"
+          }
+        }
+      }
+    },
+    "hospital.percent": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%ld %% ocupado"
+          }
+        }
+      }
+    },
+    "hospital.occupancy.total": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocupación total"
+          }
+        }
+      }
+    },
+    "hospital.free": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "camas libres"
+          }
+        }
+      }
+    },
+    "hospital.occupied": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "camas ocupadas"
+          }
+        }
+      }
+    },
+    "hospital.updated": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualizado a las %@"
+          }
+        }
+      }
+    },
+    "hospital.floor.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin piso asignado"
+          }
+        }
+      }
+    },
+    "hospital.occupied.count": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%ld ocupadas"
+          }
+        }
+      }
+    },
+    "location.eyebrow": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ubicación"
+          }
+        }
+      }
+    },
+    "location.name": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hospital CLIMESA"
+          }
+        }
+      }
+    },
+    "location.address.note": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No pudimos cargar la dirección del hospital. Abre el mapa para buscarlo por nombre."
+          }
+        }
+      }
+    },
+    "location.open_maps": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir en Mapas"
+          }
+        }
+      }
+    },
+    "location.floors": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guía de pisos"
+          }
+        }
+      }
+    },
+    "location.beds": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%ld camas"
+          }
+        }
+      }
+    },
+    "location.map_query": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hospital CLIMESA"
+          }
+        }
+      }
+    },
+    "discharge.patient.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resumen de tu alta"
+          }
+        }
+      }
+    },
+    "discharge.patient.closed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu estancia terminó. Este resumen queda disponible 30 días después del alta."
+          }
+        }
+      }
+    },
+    "discharge.patient.diagnoses": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagnósticos"
+          }
+        }
+      }
+    },
+    "discharge.patient.diagnoses.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin diagnósticos registrados en la estancia."
+          }
+        }
+      }
+    },
+    "discharge.patient.indications": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indicaciones"
+          }
+        }
+      }
+    },
+    "discharge.patient.indications.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu médico no escribió indicaciones."
+          }
+        }
+      }
+    },
+    "discharge.patient.pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendientes"
+          }
+        }
+      }
+    },
+    "discharge.patient.pending.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No quedaron pendientes."
+          }
+        }
+      }
+    },
+    "discharge.patient.followup": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seguimiento"
+          }
+        }
+      }
+    },
+    "discharge.patient.followup.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin cita de control agendada. Pide una en Citas."
+          }
+        }
+      }
+    },
+    "room.waiting": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu hospitalización está confirmada y espera una cama."
+          }
+        }
+      }
+    },
+    "room.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes una habitación asignada"
+          }
+        }
+      }
+    },
+    "room.none.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aquí aparece tu cama cuando estés hospitalizado."
+          }
+        }
+      }
+    },
+    "room.eyebrow": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi habitación"
+          }
+        }
+      }
+    },
+    "room.treating_only": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo la ve el médico tratante."
+          }
+        }
+      }
+    },
+    "mydata.birth": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nacimiento"
+          }
+        }
+      }
+    },
+    "mydata.dui": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DUI"
+          }
+        }
+      }
+    },
+    "mydata.phone": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teléfono"
+          }
+        }
+      }
+    },
+    "mydata.email": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Correo"
+          }
+        }
+      }
+    },
+    "mydata.address": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dirección"
+          }
+        }
+      }
+    },
+    "mydata.edit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar mis datos"
+          }
+        }
+      }
+    },
+    "mydata.readonly": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para corregir tus datos pide ayuda en Recepción: tu cuenta todavía no puede editarlos desde la aplicación."
+          }
+        }
+      }
+    },
+    "mydata.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo del cambio"
+          }
+        }
+      }
+    },
+    "mydata.save": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar cambios"
+          }
+        }
+      }
+    },
+    "mydata.conflict": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otra persona cambió tus datos. Se cargó la ficha actual: revísala y vuelve a intentar."
+          }
+        }
+      }
+    },
+    "mydata.unlinked": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu cuenta todavía no está unida a tu expediente. Pide en Recepción que anoten tu correo en él."
+          }
+        }
+      }
+    },
+    "location.address": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dirección"
+          }
+        }
+      }
+    },
+    "location.town": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Municipio"
+          }
+        }
+      }
+    },
+    "location.phone": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teléfono"
+          }
+        }
+      }
+    },
+    "location.call": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llamar al hospital"
+          }
+        }
+      }
+    },
+    "mydata.saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datos actualizados."
+          }
+        }
+      }
+    },
+    "section.misDatos": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis datos"
+          }
+        }
+      }
+    },
+    "section.miHabitacion": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi habitación"
+          }
+        }
+      }
+    },
+    "section.ubicacion": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ubicación"
+          }
+        }
+      }
+    },
+    "section.agenda": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agenda"
+          }
+        }
+      }
+    },
+    "section.ambulanciaEstado": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ambulancia"
+          }
+        }
+      }
+    },
+    "exams.filter": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estado del examen"
+          }
+        }
+      }
+    },
+    "exams.filter.all": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos"
+          }
+        }
+      }
+    },
+    "exams.filter.pendiente": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendiente"
+          }
+        }
+      }
+    },
+    "exams.filter.enProceso": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Proceso"
+          }
+        }
+      }
+    },
+    "exams.filter.completado": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completado"
+          }
+        }
+      }
+    },
+    "exams.filter.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay exámenes con ese estado."
+          }
+        }
+      }
+    },
+    "history.forbidden.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expediente protegido"
+          }
+        }
+      }
+    },
+    "patients.treating_only": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo verás el expediente de los pacientes que atiendes."
+          }
+        }
+      }
+    },
+    "agenda.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes citas próximas."
+          }
+        }
+      }
+    },
+    "agenda.past": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar citas anteriores"
+          }
+        }
+      }
+    },
+    "ambulance.log.restricted": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu cuenta ve el estado de la unidad. La bitácora requiere otro permiso."
+          }
+        }
+      }
+    },
+    "ambulance.unit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unidad"
+          }
+        }
+      }
+    },
+    "ambulance.since": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desde %@"
+          }
+        }
+      }
+    },
+    "ambulance.active": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Servicio activo"
+          }
+        }
+      }
+    },
+    "ambulance.log": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bitácora"
+          }
+        }
+      }
+    },
+    "ambulance.log.search": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar en la bitácora"
+          }
+        }
+      }
+    },
+    "ambulance.log.search.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Origen, destino, municipio o tripulación."
+          }
+        }
+      }
+    },
+    "ambulance.log.filters": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtros"
+          }
+        }
+      }
+    },
+    "ambulance.log.filters.active": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtros (%ld activos)"
+          }
+        }
+      }
+    },
+    "ambulance.log.clear": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar filtros"
+          }
+        }
+      }
+    },
+    "ambulance.log.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay servicios con esos filtros."
+          }
+        }
+      }
+    },
+    "ambulance.log.priority": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prioridad"
+          }
+        }
+      }
+    },
+    "ambulance.log.state": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado"
+          }
+        }
+      }
+    },
+    "ambulance.log.any": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas"
+          }
+        }
+      }
+    },
+    "ambulance.log.from": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desde"
+          }
+        }
+      }
+    },
+    "ambulance.log.to": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta"
+          }
+        }
+      }
+    },
+    "day.resume": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retomar consulta"
+          }
+        }
+      }
+    },
+    "consultation.draft.saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrador guardado en este dispositivo"
+          }
+        }
+      }
+    },
+    "consultation.draft.recovered": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrador recuperado: revisa y guarda"
+          }
+        }
+      }
+    },
+    "consultation.draft.unsaved": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tienes cambios sin guardar: no se pudo guardar el borrador en este dispositivo"
+          }
+        }
+      }
+    },
+    "auth.forgot": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Olvidaste tu contraseña?"
+          }
+        }
+      }
+    },
+    "auth.reset.headline": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recuperar contraseña"
+          }
+        }
+      }
+    },
+    "auth.reset.sub": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escribe el correo de tu cuenta. Te enviaremos un enlace para crear una contraseña nueva."
+          }
+        }
+      }
+    },
+    "auth.reset.submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar enlace"
+          }
+        }
+      }
+    },
+    "auth.reset.back": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver al ingreso"
+          }
+        }
+      }
+    },
+    "auth.check.headline": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisa tu correo"
+          }
+        }
+      }
+    },
+    "auth.check.sent": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te enviamos un enlace de confirmación a:"
+          }
+        }
+      }
+    },
+    "auth.check.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre el correo y toca «Confirmar tu correo». Después vuelve aquí e inicia sesión. Si no lo ves en unos minutos, revisa la carpeta de spam."
+          }
+        }
+      }
+    },
+    "auth.check.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya confirmé, iniciar sesión"
+          }
+        }
+      }
+    },
+    "auth.resend": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reenviar correo de confirmación"
+          }
+        }
+      }
+    },
+    "auth.resend.sending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviando correo…"
+          }
+        }
+      }
+    },
+    "appointments.reschedule": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reprogramar"
+          }
+        }
+      }
+    },
+    "appointments.reschedule.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reprogramar cita"
+          }
+        }
+      }
+    },
+    "appointments.reschedule.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu cita actual sigue vigente hasta que acepten el cambio."
+          }
+        }
+      }
+    },
+    "appointments.reschedule.submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedir el cambio"
+          }
+        }
+      }
+    },
+    "appointments.reschedule.sent": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solicitud enviada. Te avisaremos cuando la acepten o la rechacen."
+          }
+        }
+      }
+    },
+    "day.unsigned": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendientes de firmar"
+          }
+        }
+      }
+    },
+    "day.unsigned.resume": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reanudar"
+          }
+        }
+      }
+    },
+    "day.reschedules": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solicitudes de reprogramación"
+          }
+        }
+      }
+    },
+    "day.reschedules.accept": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aceptar nuevo horario"
+          }
+        }
+      }
+    },
+    "day.reschedules.reject": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechazar"
+          }
+        }
+      }
+    },
+    "day.reschedules.reject.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechazar nuevo horario"
+          }
+        }
+      }
+    },
+    "day.reschedules.reject.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo del rechazo"
+          }
+        }
+      }
+    },
+    "day.queue.callAgain": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llamar de nuevo"
+          }
+        }
+      }
+    },
+    "hospitalized.revoke": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revocar alta"
+          }
+        }
+      }
+    },
+    "hospitalized.attending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tratante: %@"
+          }
+        }
+      }
+    },
+    "hospitalized.discharge.signed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alta firmada: %@"
+          }
+        }
+      }
+    },
+    "hospitalized.discharge.signedBy": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Firmó %@ · %@"
+          }
+        }
+      }
+    },
+    "hospitalized.discharge.signedNoType": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alta firmada"
+          }
+        }
+      }
+    },
+    "hospitalized.discharge.specialHandling": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta salida requiere un trámite especial."
+          }
+        }
+      }
+    },
+    "hospitalized.discharge.pendingCount": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendientes registrados: %ld; el detalle lo ve el equipo tratante."
+          }
+        }
+      }
+    },
+    "hospitalized.discharge.noPending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin pendientes al alta."
+          }
+        }
+      }
+    },
+    "hospitalized.discharge.pendingItem": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "• %@ (responsable: %@)"
+          }
+        }
+      }
+    },
+    "discharge.pending.remove": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar pendiente"
+          }
+        }
+      }
+    },
+    "revoke.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La admisión vuelve a hospitalizado mientras no haya salida. Escribe por qué revocas el alta."
+          }
+        }
+      }
+    },
+    "revoke.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo de la revocación"
+          }
+        }
+      }
+    },
+    "results.critical.pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%ld resultado(s) con valor crítico esperan tu revisión."
+          }
+        }
+      }
+    },
+    "results.amended": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado corregido: revísalo de nuevo."
+          }
+        }
+      }
+    },
+    "results.inProgress": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis órdenes en curso"
+          }
+        }
+      }
+    },
+    "results.cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar orden"
+          }
+        }
+      }
+    },
+    "results.cancel.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar orden de laboratorio"
+          }
+        }
+      }
+    },
+    "results.cancel.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo de la cancelación"
+          }
+        }
+      }
+    },
+    "results.cancel.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orden cancelada."
+          }
+        }
+      }
+    },
+    "exams.amended": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El laboratorio corrigió un resultado; tu médico lo revisa de nuevo."
+          }
+        }
+      }
+    },
+    "arrival.handover": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrega del paciente"
+          }
+        }
+      }
+    },
+    "arrival.received": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recibido"
+          }
+        }
+      }
+    },
+    "arrival.receivedBy": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recibido por %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "arrival.clinicalStaff": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "personal clínico"
+          }
+        }
+      }
+    },
+    "arrival.receive": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marcar recibido"
+          }
+        }
+      }
+    },
+    "arrival.receive.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paciente recibido en el hospital."
+          }
+        }
+      }
+    },
+    "arrival.receive.wait": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Podrás marcar recibido al paciente cuando la ambulancia registre su llegada al hospital."
+          }
+        }
+      }
+    },
+    "arrival.pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Servicios por recibir"
+          }
+        }
+      }
+    },
+    "arrival.pending.arrived": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Despachado %@ · llegó, falta la entrega"
+          }
+        }
+      }
+    },
+    "arrival.pending.onTheWay": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Despachado %@ · en camino"
+          }
+        }
+      }
+    },
+    "arrival.receive.otherRole": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La ambulancia llegó. La entrega la marca el personal de turno en Emergencia o con relación de atención con el paciente."
+          }
+        }
+      }
+    },
+    "ambulance.cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar solicitud"
+          }
+        }
+      }
+    },
+    "ambulance.cancel.detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Despacho dejará de ver tu solicitud. Si la emergencia sigue, llama al 911."
+          }
+        }
+      }
+    },
+    "ambulance.cancel.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo (opcional)"
+          }
+        }
+      }
+    },
+    "ambulance.cancel.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solicitud cancelada."
+          }
+        }
+      }
+    },
+    "appointments.franja.manana": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mañana"
+          }
+        }
+      }
+    },
+    "appointments.franja.tarde": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tarde"
+          }
+        }
+      }
+    },
+    "appointments.franja.cualquiera": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cualquier hora"
+          }
+        }
+      }
+    },
+    "appointments.category.mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis solicitudes"
+          }
+        }
+      }
+    },
+    "appointments.category.state.pendiente": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por asignar"
+          }
+        }
+      }
+    },
+    "appointments.category.state.asignada": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cita asignada"
+          }
+        }
+      }
+    },
+    "appointments.category.state.rechazada": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechazada"
+          }
+        }
+      }
+    },
+    "appointments.category.state.cancelada": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retirada"
+          }
+        }
+      }
+    },
+    "appointments.category.assigned": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cita con %1$@ el %2$@"
+          }
+        }
+      }
+    },
+    "appointments.category.withdraw": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retirar solicitud"
+          }
+        }
+      }
+    },
+    "appointments.category.withdraw.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recepción ya no verá esta solicitud."
+          }
+        }
+      }
+    },
+    "appointments.category.withdrawn": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solicitud retirada."
+          }
+        }
+      }
+    },
+    "appointments.category.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Por qué quieres la cita?"
+          }
+        }
+      }
+    },
+    "appointments.category.count": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige de una a tres opciones (%d de 3)."
+          }
+        }
+      }
+    },
+    "appointments.category.search": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar motivo"
+          }
+        }
+      }
+    },
+    "appointments.category.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ningún motivo coincide. Prueba otra palabra o elige Consulta general."
+          }
+        }
+      }
+    },
+    "appointments.category.franja": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Franja preferida"
+          }
+        }
+      }
+    },
+    "appointments.category.note": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota para recepción · opcional"
+          }
+        }
+      }
+    },
+    "appointments.category.note.long": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La nota admite hasta 280 caracteres."
+          }
+        }
+      }
+    },
+    "appointments.category.general": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medicina general"
+          }
+        }
+      }
+    },
+    "appointments.category.doctor": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya tengo médico (opcional)"
+          }
+        }
+      }
+    },
+    "appointments.category.doctor.search": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Médico preferido · opcional"
+          }
+        }
+      }
+    },
+    "appointments.category.doctor.remove": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar"
+          }
+        }
+      }
+    },
+    "appointments.category.sent": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solicitud enviada. Recepción te asignará médico y hora; te avisaremos aquí."
+          }
+        }
+      }
+    },
+    "appointments.category.submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar solicitud"
+          }
+        }
+      }
+    },
+    "queue.next.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quién pasa después"
+          }
+        }
+      }
+    },
+    "queue.next.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nadie espera en consulta general."
+          }
+        }
+      }
+    },
+    "queue.next.rule": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regla: %@"
+          }
+        }
+      }
+    },
+    "queue.called.undoable": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llamaste %@."
+          }
+        }
+      }
+    },
+    "queue.undo": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deshacer"
+          }
+        }
+      }
+    },
+    "queue.undone": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ volvió a la espera."
+          }
+        }
+      }
+    },
+    "queue.menu": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover o cambiar prioridad"
+          }
+        }
+      }
+    },
+    "queue.menu.for": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover o cambiar prioridad de %@"
+          }
+        }
+      }
+    },
+    "queue.move.to": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover a %@ (%@)"
+          }
+        }
+      }
+    },
+    "queue.priority.to": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prioridad: %@"
+          }
+        }
+      }
+    },
+    "consultation.step.1": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1. Consulta"
+          }
+        }
+      }
+    },
+    "consultation.step.2": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2. Procedimientos y plan"
+          }
+        }
+      }
+    },
+    "consultation.step.3": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3. Receta y exámenes"
+          }
+        }
+      }
+    },
+    "consultation.step.4": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4. Cerrar consulta"
+          }
+        }
+      }
+    },
+    "consultation.next.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consulta cerrada · quién pasa después"
+          }
+        }
+      }
+    },
+    "consultation.next.call": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llamar a %@"
+          }
+        }
+      }
+    },
+    "consultation.next.dismiss": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora no"
+          }
+        }
+      }
+    },
+    "queue.removeCall": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar un llamado (van %lld)"
+          }
+        }
+      }
+    },
+    "consultation.sign.confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Firmar la consulta?"
+          }
+        }
+      }
+    },
+    "discharge.sign.confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Firmar el alta?"
+          }
+        }
+      }
+    },
+    "revoke.confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Revocar el alta?"
+          }
+        }
+      }
+    },
+    "day.consultation.start": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar consulta"
+          }
+        }
+      }
+    },
+    "day.consultation.view": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver consulta"
+          }
+        }
+      }
+    },
+    "accesses.row": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ vio: %2$@"
+          }
+        }
+      }
+    },
+    "accesses.reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo: %@"
+          }
+        }
+      }
+    },
+    "ambulance.prefilled.both": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usamos la dirección y el teléfono de Mis datos. Cámbialos si estás en otro lugar."
+          }
+        }
+      }
+    },
+    "ambulance.prefilled.address": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usamos la dirección de Mis datos. Cámbiala si estás en otro lugar."
+          }
+        }
+      }
+    },
+    "ambulance.prefilled.phone": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usamos el teléfono de Mis datos. Cámbialo si es otro."
+          }
+        }
+      }
+    },
+    "consultation.sign.saveFailed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudieron guardar las notas, así que la consulta no se firmó. Revisa el error y vuelve a firmar."
+          }
+        }
+      }
+    },
+    "section.avisos": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos"
+          }
+        }
+      }
+    },
+    "notices.filter": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtrar avisos"
+          }
+        }
+      }
+    },
+    "notices.ack": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enterado"
+          }
+        }
+      }
+    },
+    "notices.snooze": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recordarme en %@ h"
+          }
+        }
+      }
+    },
+    "notices.snooze.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te lo recordamos en %@ h."
+          }
+        }
+      }
+    },
+    "notices.banner.more": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 de %d sin «Enterado»"
+          }
+        }
+      }
+    },
+    "notices.banner.open": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver en Avisos"
+          }
+        }
+      }
+    },
+    "notices.empty.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estás al día"
+          }
+        }
+      }
+    },
+    "notices.empty.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay avisos vigentes para tu rol ni tu área."
+          }
+        }
+      }
+    },
+    "notices.empty.critical": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin avisos críticos"
+          }
+        }
+      }
+    },
+    "notices.empty.read": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo leído"
+          }
+        }
+      }
+    },
+    "notices.empty.filter": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambia el filtro para ver los demás avisos."
+          }
+        }
+      }
+    },
+    "notices.unread": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin leer"
+          }
+        }
+      }
+    },
+    "notices.read": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enterado"
+          }
+        }
+      }
+    },
+    "notices.until.short": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hasta %@"
+          }
+        }
+      }
+    },
+    "notices.detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aviso"
+          }
+        }
+      }
+    },
+    "notices.published": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Publicado"
+          }
+        }
+      }
+    },
+    "notices.until": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vigente hasta"
+          }
+        }
+      }
+    },
+    "notices.remind": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te lo recordamos"
+          }
+        }
+      }
+    },
+    "notices.for": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para: %@"
+          }
+        }
+      }
+    },
+    "lab.attachments.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informe externo"
+          }
+        }
+      }
+    },
+    "lab.attachments.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin adjuntos visibles."
+          }
+        }
+      }
+    },
+    "lab.attachments.privacy": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cada archivo se abre con un enlace que dura 5 minutos y queda registrado."
+          }
+        }
+      }
+    },
+    "lab.attachments.open": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver archivo"
+          }
+        }
+      }
+    },
+    "lab.attachments.opening": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparando…"
+          }
+        }
+      }
+    },
+    "lab.attachments.open.a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver archivo %@"
+          }
+        }
+      }
+    },
+    "lab.attachments.referenceOnly": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo hay la referencia del archivo: no se guardó en el sistema."
+          }
+        }
+      }
+    },
+    "day.reschedules.accepted": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nuevo horario aceptado."
+          }
+        }
+      }
+    },
+    "day.reschedules.rejected": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambio rechazado; la cita sigue en su horario."
+          }
+        }
+      }
+    },
+    "day.queue.calledElsewhere": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llamado desde otro consultorio"
+          }
+        }
+      }
+    },
+    "results.awaitingReview": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completada · falta revisión médica"
+          }
+        }
+      }
+    },
+    "appointments.category.doctor.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ningún médico con ese nombre."
+          }
+        }
+      }
+    },
+    "auth.resend.wait": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reenviar correo en %lld s"
+          }
+        }
+      }
+    },
+    "consultation.steps.label": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasos de la consulta"
+          }
+        }
+      }
+    },
+    "consultation.step.next": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siguiente: %@"
+          }
+        }
+      }
+    },
+    "lab.search": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar examen"
+          }
+        }
+      }
+    },
+    "lab.selected": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld seleccionados"
+          }
+        }
+      }
+    },
+    "lab.search.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ningún examen coincide con la búsqueda."
+          }
+        }
+      }
+    },
+    "rx.removeLine": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar línea"
+          }
+        }
+      }
+    },
+    "queue.next.why": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Por qué este número?"
+          }
+        }
+      }
+    },
+    "results.followUp.record": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expediente %@"
+          }
+        }
+      }
+    },
+    "appointments.actions": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acciones de la cita"
+          }
+        }
+      }
+    },
+    "results.externalLoad.open": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargar resultado externo"
+          }
+        }
+      }
+    },
+    "results.externalLoad.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado externo"
+          }
+        }
+      }
+    },
+    "results.externalLoad.place": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Examen hecho en %@."
+          }
+        }
+      }
+    },
+    "results.externalLoad.file": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informe (foto o PDF)"
+          }
+        }
+      }
+    },
+    "results.externalLoad.values": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valores clave"
+          }
+        }
+      }
+    },
+    "results.externalLoad.note": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota sobre el informe (opcional)"
+          }
+        }
+      }
+    },
+    "results.externalLoad.pickFile": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elegir PDF o foto"
+          }
+        }
+      }
+    },
+    "results.externalLoad.changeFile": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar archivo"
+          }
+        }
+      }
+    },
+    "results.externalLoad.pickPhoto": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elegir de Fotos"
+          }
+        }
+      }
+    },
+    "results.externalLoad.saving": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardando los valores…"
+          }
+        }
+      }
+    },
+    "results.externalLoad.uploading": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subiendo archivo… %d %%"
+          }
+        }
+      }
+    },
+    "results.externalLoad.filePending": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archivo pendiente: los valores ya se guardaron"
+          }
+        }
+      }
+    },
+    "results.externalLoad.retry": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reintentar"
+          }
+        }
+      }
+    },
+    "results.externalLoad.save": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar resultado"
+          }
+        }
+      }
+    },
+    "results.externalLoad.failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo guardar el resultado externo. Vuelve a intentar."
+          }
+        }
+      }
+    },
+    "results.externalLoad.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado externo guardado con su archivo; la orden espera tu revisión."
+          }
+        }
+      }
+    },
+    "results.externalLoad.doneNoFile": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado externo guardado; la orden espera tu revisión."
+          }
+        }
+      }
+    },
+    "lab.attachments.upload": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subir archivo"
+          }
+        }
+      }
+    },
+    "admission.active": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El paciente ya tiene una admisión activa; no se puede indicar otra."
+          }
+        }
+      }
+    },
+    "consultation.diagnosis.search": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar diagnóstico CIE-10 (código o palabras)"
+          }
+        }
+      }
+    },
+    "consultation.diagnosis.chosen": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagnóstico CIE-10"
+          }
+        }
+      }
+    },
+    "consultation.diagnosis.change": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar"
+          }
+        }
+      }
+    },
+    "consultation.diagnosis.noMatch": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin coincidencias en el catálogo CIE-10."
+          }
+        }
+      }
+    },
+    "arrival.receive.confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Marcar al paciente como recibido?"
+          }
+        }
+      }
+    },
+    "arrival.receive.confirm.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Queda registrado con tu nombre y la hora de recepción."
+          }
+        }
+      }
+    },
+    "notices.group.current": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vigentes · hoy"
+          }
+        }
+      }
+    },
+    "notices.group.current.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay avisos vigentes."
+          }
+        }
+      }
+    },
+    "notices.group.scheduled": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Programados · %@"
+          }
+        }
+      }
+    },
+    "notices.starts": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empieza"
+          }
+        }
+      }
+    },
+    "notices.bell": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos"
+          }
+        }
+      }
+    },
+    "notices.bell.unread": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos, %@ sin leer"
+          }
+        }
+      }
+    },
+    "notices.bell.critical": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos, hay un aviso crítico sin leer"
+          }
+        }
+      }
+    },
+    "appointments.unlinked.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vincula tu expediente para ver y pedir citas."
+          }
+        }
+      }
+    },
+    "appointments.unlinked.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre «Vincular expediente» en Más; recepción revisa tu solicitud."
+          }
+        }
+      }
+    },
+    "exams.doctorNote": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota de tu médico: %@"
+          }
+        }
+      }
+    },
+    "exams.cancelReason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo de la cancelación: %@"
+          }
+        }
+      }
+    },
+    "exams.outOfRange": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fuera de rango"
+          }
+        }
+      }
+    },
+    "results.range": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Referencia: %@"
+          }
+        }
+      }
+    },
+    "exams.more": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver %lld más"
+          }
+        }
+      }
+    },
+    "exams.less": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver menos"
+          }
+        }
+      }
+    },
+    "ambulance.last": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu última solicitud"
+          }
+        }
+      }
+    },
+    "ambulance.discardReason": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo de despacho"
+          }
+        }
+      }
+    },
+    "ambulance.unclosed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin cierre"
+          }
+        }
+      }
+    },
+    "ambulance.log.pastDays": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Días anteriores · %lld servicios"
+          }
+        }
+      }
+    },
+    "arrival.nextAdmission": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siguiente paso: Recepción ingresa al paciente en Admisión con origen «Ambulancia»."
+          }
+        }
+      }
+    },
+    "record.external.open": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrar resultado externo"
+          }
+        }
+      }
+    },
+    "record.external.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El paciente trae un examen que se hizo en otro sitio y que no se pidió aquí. Queda unido a su última consulta, completado y esperando tu revisión; el paciente no ve los valores hasta que los liberes."
+          }
+        }
+      }
+    },
+    "record.external.place": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dónde se hizo"
+          }
+        }
+      }
+    },
+    "record.external.placeHint": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por ejemplo: Laboratorio Ejemplo, San Salvador"
+          }
+        }
+      }
+    },
+    "record.external.exams": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exámenes y valores del informe"
+          }
+        }
+      }
+    },
+    "record.external.search": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar examen del catálogo"
+          }
+        }
+      }
+    },
+    "record.external.noMatch": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay exámenes con ese nombre."
+          }
+        }
+      }
+    },
+    "record.external.catalogLoading": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando el catálogo de exámenes…"
+          }
+        }
+      }
+    },
+    "record.external.remove": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar"
+          }
+        }
+      }
+    },
+    "record.external.save": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrar resultado"
+          }
+        }
+      }
+    },
+    "record.external.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado externo registrado con su archivo: queda en «Resultados por revisar» para liberarlo."
+          }
+        }
+      }
+    },
+    "record.external.doneNoFile": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado externo registrado: queda en «Resultados por revisar» para liberarlo."
+          }
+        }
+      }
+    },
+    "vitals.entry.open": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrar signos"
+          }
+        }
+      }
+    },
+    "vitals.entry.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrar signos vitales"
+          }
+        }
+      }
+    },
+    "vitals.entry.measures": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medidas"
+          }
+        }
+      }
+    },
+    "vitals.entry.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Llena solo lo que mediste; la presión lleva la sistólica y la diastólica."
+          }
+        }
+      }
+    },
+    "vitals.entry.note": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota (opcional)"
+          }
+        }
+      }
+    },
+    "vitals.entry.save": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar signos"
+          }
+        }
+      }
+    },
+    "vitals.entry.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signos vitales registrados."
+          }
+        }
+      }
+    },
+    "ds.error.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No pudimos cargar esta información"
+          }
+        }
+      }
+    },
+    "ds.info.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tienes acceso a esta información"
+          }
+        }
+      }
+    },
+    "link.reception.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuando Recepción lo anote, tu cuenta se une sola a tu expediente."
+          }
+        }
+      }
+    },
+    "consultation.context.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo que pidió el paciente"
+          }
+        }
+      }
+    },
+    "consultation.context.none": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El paciente no dejó un motivo escrito."
+          }
+        }
+      }
+    },
+    "consultation.unsigned.resume": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reanudarla"
+          }
+        }
+      }
+    },
+    "consultation.unsigned.startAnyway": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar otra de todos modos"
+          }
+        }
+      }
+    },
+    "consultation.unsigned.back": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver"
+          }
+        }
+      }
+    },
+    "consultation.unsigned.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo habitual es firmarla antes de iniciar otra. Puedes reanudarla ahora o iniciar esta consulta de todos modos."
+          }
+        }
+      }
+    },
+    "day.section.now": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora"
+          }
+        }
+      }
+    },
+    "day.section.upcoming": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Próximas"
+          }
+        }
+      }
+    },
+    "day.section.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atendidas hoy"
+          }
+        }
+      }
+    },
+    "day.record.view": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver expediente"
+          }
+        }
+      }
+    },
+    "day.history.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial de días anteriores"
+          }
+        }
+      }
+    },
+    "history.lab.detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Examen de laboratorio"
+          }
+        }
+      }
+    },
+    "history.lab.why": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por qué se pidió"
+          }
+        }
+      }
+    },
+    "history.lab.origin": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consulta del %@"
+          }
+        }
+      }
+    },
+    "history.lab.noOrigin": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta orden no viene de una consulta (por ejemplo, de una hospitalización)."
+          }
+        }
+      }
+    },
+    "history.lab.ordered": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedido"
+          }
+        }
+      }
+    },
+    "results.orderedAt": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedido el %@"
+          }
+        }
+      }
+    },
+    "profile.accesos.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quién abrió tu expediente y cuándo"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
